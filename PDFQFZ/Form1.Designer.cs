@@ -86,23 +86,27 @@ namespace PDFQFZ
             // 
             // bt_gz
             // 
-            this.bt_gz.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_gz.Location = new System.Drawing.Point(201, 388);
+            this.bt_gz.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.bt_gz.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_gz.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bt_gz.Location = new System.Drawing.Point(21, 581);
+            this.bt_gz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_gz.Name = "bt_gz";
-            this.bt_gz.Size = new System.Drawing.Size(75, 36);
+            this.bt_gz.Size = new System.Drawing.Size(656, 55);
             this.bt_gz.TabIndex = 0;
             this.bt_gz.Text = "盖章";
-            this.bt_gz.UseVisualStyleBackColor = true;
+            this.bt_gz.UseVisualStyleBackColor = false;
             this.bt_gz.Click += new System.EventHandler(this.button1_Click);
             // 
             // pathText
             // 
             this.pathText.AllowDrop = true;
             this.pathText.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.pathText.Location = new System.Drawing.Point(97, 73);
+            this.pathText.Location = new System.Drawing.Point(146, 110);
+            this.pathText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pathText.Name = "pathText";
             this.pathText.ReadOnly = true;
-            this.pathText.Size = new System.Drawing.Size(357, 26);
+            this.pathText.Size = new System.Drawing.Size(534, 35);
             this.pathText.TabIndex = 1;
             this.pathText.DragDrop += new System.Windows.Forms.DragEventHandler(this.pathText_DragDrop);
             this.pathText.DragEnter += new System.Windows.Forms.DragEventHandler(this.pathText_DragEnter);
@@ -110,9 +114,10 @@ namespace PDFQFZ
             // SelectPath
             // 
             this.SelectPath.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SelectPath.Location = new System.Drawing.Point(13, 71);
+            this.SelectPath.Location = new System.Drawing.Point(20, 106);
+            this.SelectPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SelectPath.Name = "SelectPath";
-            this.SelectPath.Size = new System.Drawing.Size(75, 30);
+            this.SelectPath.Size = new System.Drawing.Size(112, 45);
             this.SelectPath.TabIndex = 2;
             this.SelectPath.Text = "选择";
             this.SelectPath.UseVisualStyleBackColor = true;
@@ -121,18 +126,20 @@ namespace PDFQFZ
             // textBCpath
             // 
             this.textBCpath.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBCpath.Location = new System.Drawing.Point(98, 128);
+            this.textBCpath.Location = new System.Drawing.Point(147, 192);
+            this.textBCpath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBCpath.Name = "textBCpath";
             this.textBCpath.ReadOnly = true;
-            this.textBCpath.Size = new System.Drawing.Size(356, 26);
+            this.textBCpath.Size = new System.Drawing.Size(532, 35);
             this.textBCpath.TabIndex = 3;
             // 
             // OutPath
             // 
             this.OutPath.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.OutPath.Location = new System.Drawing.Point(13, 126);
+            this.OutPath.Location = new System.Drawing.Point(20, 189);
+            this.OutPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OutPath.Name = "OutPath";
-            this.OutPath.Size = new System.Drawing.Size(75, 30);
+            this.OutPath.Size = new System.Drawing.Size(112, 45);
             this.OutPath.TabIndex = 5;
             this.OutPath.Text = "选择";
             this.OutPath.UseVisualStyleBackColor = true;
@@ -141,9 +148,10 @@ namespace PDFQFZ
             // GzPath
             // 
             this.GzPath.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.GzPath.Location = new System.Drawing.Point(379, 182);
+            this.GzPath.Location = new System.Drawing.Point(568, 273);
+            this.GzPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GzPath.Name = "GzPath";
-            this.GzPath.Size = new System.Drawing.Size(75, 30);
+            this.GzPath.Size = new System.Drawing.Size(112, 45);
             this.GzPath.TabIndex = 6;
             this.GzPath.Text = "导入";
             this.GzPath.UseVisualStyleBackColor = true;
@@ -153,9 +161,10 @@ namespace PDFQFZ
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(11, 49);
+            this.label1.Location = new System.Drawing.Point(16, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 20);
+            this.label1.Size = new System.Drawing.Size(360, 28);
             this.label1.TabIndex = 7;
             this.label1.Text = "请选择需要盖章的PDF文件(支持多选)";
             // 
@@ -163,9 +172,10 @@ namespace PDFQFZ
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(11, 105);
+            this.label2.Location = new System.Drawing.Point(16, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 20);
+            this.label2.Size = new System.Drawing.Size(304, 28);
             this.label2.TabIndex = 8;
             this.label2.Text = "请选择PDF盖章后所保存的目录";
             // 
@@ -173,21 +183,23 @@ namespace PDFQFZ
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(11, 161);
+            this.label3.Location = new System.Drawing.Point(16, 242);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.Size = new System.Drawing.Size(159, 28);
             this.label3.TabIndex = 9;
             this.label3.Text = "请选择印章文件";
             // 
             // log
             // 
             this.log.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.log.Location = new System.Drawing.Point(13, 430);
+            this.log.Location = new System.Drawing.Point(20, 645);
+            this.log.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.log.Multiline = true;
             this.log.Name = "log";
             this.log.ReadOnly = true;
             this.log.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.log.Size = new System.Drawing.Size(441, 119);
+            this.log.Size = new System.Drawing.Size(660, 176);
             this.log.TabIndex = 10;
             this.log.Text = "提示:建议使用472像素以上且背景透明的印章图片.\r\n使用合并模式会导致文字不可编辑,并且原数字签名丢失.随意骑缝章和自定义加印章共用右边的预览定位,所以同时使用" +
     "的时候会冲突,建议分开盖章.";
@@ -204,29 +216,32 @@ namespace PDFQFZ
             "所有页加印章",
             "自定义加印章",
             "仅首页加印章"});
-            this.comboYz.Location = new System.Drawing.Point(240, 12);
+            this.comboYz.Location = new System.Drawing.Point(360, 18);
+            this.comboYz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboYz.Name = "comboYz";
-            this.comboYz.Size = new System.Drawing.Size(113, 28);
+            this.comboYz.Size = new System.Drawing.Size(168, 36);
             this.comboYz.TabIndex = 12;
             this.comboYz.SelectedIndexChanged += new System.EventHandler(this.comboYz_SelectedIndexChanged);
             this.comboYz.SelectionChangeCommitted += new System.EventHandler(this.comboYz_SelectionChangeCommitted);
             // 
             // textPx
             // 
-            this.textPx.Location = new System.Drawing.Point(379, 399);
+            this.textPx.Location = new System.Drawing.Point(568, 598);
+            this.textPx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textPx.Name = "textPx";
             this.textPx.ReadOnly = true;
-            this.textPx.Size = new System.Drawing.Size(34, 21);
+            this.textPx.Size = new System.Drawing.Size(49, 28);
             this.textPx.TabIndex = 15;
             this.textPx.Text = "0.77";
             this.textPx.Visible = false;
             // 
             // textPy
             // 
-            this.textPy.Location = new System.Drawing.Point(419, 399);
+            this.textPy.Location = new System.Drawing.Point(628, 598);
+            this.textPy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textPy.Name = "textPy";
             this.textPy.ReadOnly = true;
-            this.textPy.Size = new System.Drawing.Size(35, 21);
+            this.textPy.Size = new System.Drawing.Size(50, 28);
             this.textPy.TabIndex = 16;
             this.textPy.Text = "0.88";
             this.textPy.Visible = false;
@@ -234,9 +249,10 @@ namespace PDFQFZ
             // textCC
             // 
             this.textCC.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textCC.Location = new System.Drawing.Point(84, 289);
+            this.textCC.Location = new System.Drawing.Point(126, 434);
+            this.textCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textCC.Name = "textCC";
-            this.textCC.Size = new System.Drawing.Size(42, 26);
+            this.textCC.Size = new System.Drawing.Size(61, 35);
             this.textCC.TabIndex = 19;
             this.textCC.Text = "40";
             // 
@@ -244,9 +260,10 @@ namespace PDFQFZ
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(126, 292);
+            this.label7.Location = new System.Drawing.Point(189, 438);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 20);
+            this.label7.Size = new System.Drawing.Size(52, 28);
             this.label7.TabIndex = 20;
             this.label7.Text = "mm";
             // 
@@ -260,18 +277,20 @@ namespace PDFQFZ
             "下",
             "左",
             "右"});
-            this.comboBoxWZ.Location = new System.Drawing.Point(94, 322);
+            this.comboBoxWZ.Location = new System.Drawing.Point(141, 483);
+            this.comboBoxWZ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxWZ.Name = "comboBoxWZ";
-            this.comboBoxWZ.Size = new System.Drawing.Size(65, 28);
+            this.comboBoxWZ.Size = new System.Drawing.Size(96, 36);
             this.comboBoxWZ.TabIndex = 22;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(9, 325);
+            this.label6.Location = new System.Drawing.Point(14, 488);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.Size = new System.Drawing.Size(117, 28);
             this.label6.TabIndex = 23;
             this.label6.Text = "骑缝章位置";
             // 
@@ -279,18 +298,20 @@ namespace PDFQFZ
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(213, 325);
+            this.label8.Location = new System.Drawing.Point(320, 488);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 20);
+            this.label8.Size = new System.Drawing.Size(31, 28);
             this.label8.TabIndex = 25;
             this.label8.Text = "%";
             // 
             // textWzbl
             // 
             this.textWzbl.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textWzbl.Location = new System.Drawing.Point(165, 323);
+            this.textWzbl.Location = new System.Drawing.Point(248, 484);
+            this.textWzbl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textWzbl.Name = "textWzbl";
-            this.textWzbl.Size = new System.Drawing.Size(42, 26);
+            this.textWzbl.Size = new System.Drawing.Size(61, 35);
             this.textWzbl.TabIndex = 24;
             this.textWzbl.Text = "50";
             // 
@@ -302,9 +323,10 @@ namespace PDFQFZ
             this.comboType.Items.AddRange(new object[] {
             "目录模式",
             "文件模式"});
-            this.comboType.Location = new System.Drawing.Point(13, 12);
+            this.comboType.Location = new System.Drawing.Point(20, 18);
+            this.comboType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboType.Name = "comboType";
-            this.comboType.Size = new System.Drawing.Size(103, 28);
+            this.comboType.Size = new System.Drawing.Size(152, 36);
             this.comboType.TabIndex = 26;
             this.comboType.SelectionChangeCommitted += new System.EventHandler(this.comboType_SelectionChangeCommitted);
             // 
@@ -319,9 +341,10 @@ namespace PDFQFZ
             "单页骑缝章",
             "双页骑缝章",
             "随意骑缝章"});
-            this.comboQfz.Location = new System.Drawing.Point(122, 12);
+            this.comboQfz.Location = new System.Drawing.Point(183, 18);
+            this.comboQfz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboQfz.Name = "comboQfz";
-            this.comboQfz.Size = new System.Drawing.Size(112, 28);
+            this.comboQfz.Size = new System.Drawing.Size(166, 36);
             this.comboQfz.TabIndex = 27;
             this.comboQfz.SelectedIndexChanged += new System.EventHandler(this.comboQfz_SelectedIndexChanged);
             this.comboQfz.SelectionChangeCommitted += new System.EventHandler(this.comboQfz_SelectionChangeCommitted);
@@ -335,48 +358,53 @@ namespace PDFQFZ
             "不使用数字签名",
             "自生成证书签名",
             "自定义证书签名"});
-            this.comboQmtype.Location = new System.Drawing.Point(13, 218);
+            this.comboQmtype.Location = new System.Drawing.Point(20, 327);
+            this.comboQmtype.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboQmtype.Name = "comboQmtype";
-            this.comboQmtype.Size = new System.Drawing.Size(148, 28);
+            this.comboQmtype.Size = new System.Drawing.Size(220, 36);
             this.comboQmtype.TabIndex = 28;
             this.comboQmtype.SelectionChangeCommitted += new System.EventHandler(this.comboQmtype_SelectionChangeCommitted);
             // 
             // textname
             // 
             this.textname.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textname.Location = new System.Drawing.Point(56, 253);
+            this.textname.Location = new System.Drawing.Point(84, 380);
+            this.textname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textname.Name = "textname";
             this.textname.ReadOnly = true;
-            this.textname.Size = new System.Drawing.Size(178, 26);
+            this.textname.Size = new System.Drawing.Size(265, 35);
             this.textname.TabIndex = 30;
             // 
             // labelname
             // 
             this.labelname.AutoSize = true;
             this.labelname.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelname.Location = new System.Drawing.Point(9, 256);
+            this.labelname.Location = new System.Drawing.Point(14, 384);
+            this.labelname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelname.Name = "labelname";
-            this.labelname.Size = new System.Drawing.Size(37, 20);
+            this.labelname.Size = new System.Drawing.Size(54, 28);
             this.labelname.TabIndex = 29;
             this.labelname.Text = "签名";
             // 
             // textpass
             // 
             this.textpass.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textpass.Location = new System.Drawing.Point(283, 253);
+            this.textpass.Location = new System.Drawing.Point(424, 380);
+            this.textpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textpass.Name = "textpass";
             this.textpass.PasswordChar = '*';
             this.textpass.ReadOnly = true;
-            this.textpass.Size = new System.Drawing.Size(171, 26);
+            this.textpass.Size = new System.Drawing.Size(254, 35);
             this.textpass.TabIndex = 32;
             // 
             // labelpass
             // 
             this.labelpass.AutoSize = true;
             this.labelpass.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelpass.Location = new System.Drawing.Point(240, 256);
+            this.labelpass.Location = new System.Drawing.Point(360, 384);
+            this.labelpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelpass.Name = "labelpass";
-            this.labelpass.Size = new System.Drawing.Size(37, 20);
+            this.labelpass.Size = new System.Drawing.Size(54, 28);
             this.labelpass.TabIndex = 31;
             this.labelpass.Text = "密码";
             // 
@@ -385,9 +413,10 @@ namespace PDFQFZ
             this.comboPDFlist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPDFlist.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboPDFlist.FormattingEnabled = true;
-            this.comboPDFlist.Location = new System.Drawing.Point(472, 12);
+            this.comboPDFlist.Location = new System.Drawing.Point(708, 18);
+            this.comboPDFlist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboPDFlist.Name = "comboPDFlist";
-            this.comboPDFlist.Size = new System.Drawing.Size(247, 28);
+            this.comboPDFlist.Size = new System.Drawing.Size(368, 36);
             this.comboPDFlist.TabIndex = 33;
             this.comboPDFlist.SelectedIndexChanged += new System.EventHandler(this.comboPDFlist_SelectedIndexChanged);
             this.comboPDFlist.SelectionChangeCommitted += new System.EventHandler(this.comboPDFlist_SelectionChangeCommitted);
@@ -395,9 +424,10 @@ namespace PDFQFZ
             // buttonNext
             // 
             this.buttonNext.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonNext.Location = new System.Drawing.Point(793, 12);
+            this.buttonNext.Location = new System.Drawing.Point(1190, 18);
+            this.buttonNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(60, 30);
+            this.buttonNext.Size = new System.Drawing.Size(90, 45);
             this.buttonNext.TabIndex = 34;
             this.buttonNext.Text = "下一页";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -406,9 +436,10 @@ namespace PDFQFZ
             // buttonUp
             // 
             this.buttonUp.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonUp.Location = new System.Drawing.Point(727, 11);
+            this.buttonUp.Location = new System.Drawing.Point(1090, 16);
+            this.buttonUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonUp.Name = "buttonUp";
-            this.buttonUp.Size = new System.Drawing.Size(60, 30);
+            this.buttonUp.Size = new System.Drawing.Size(90, 45);
             this.buttonUp.TabIndex = 35;
             this.buttonUp.Text = "上一页";
             this.buttonUp.UseVisualStyleBackColor = true;
@@ -418,9 +449,10 @@ namespace PDFQFZ
             // 
             this.labelPage.AutoSize = true;
             this.labelPage.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelPage.Location = new System.Drawing.Point(928, 16);
+            this.labelPage.Location = new System.Drawing.Point(1392, 24);
+            this.labelPage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPage.Name = "labelPage";
-            this.labelPage.Size = new System.Drawing.Size(31, 20);
+            this.labelPage.Size = new System.Drawing.Size(45, 28);
             this.labelPage.TabIndex = 36;
             this.labelPage.Text = "0/0";
             // 
@@ -428,9 +460,10 @@ namespace PDFQFZ
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(790, 400);
+            this.pictureBox2.Location = new System.Drawing.Point(1185, 600);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 72);
+            this.pictureBox2.Size = new System.Drawing.Size(108, 108);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
@@ -440,9 +473,10 @@ namespace PDFQFZ
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(540, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(810, 75);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(358, 500);
+            this.pictureBox1.Size = new System.Drawing.Size(537, 750);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -451,9 +485,10 @@ namespace PDFQFZ
             // textRotation
             // 
             this.textRotation.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textRotation.Location = new System.Drawing.Point(252, 290);
+            this.textRotation.Location = new System.Drawing.Point(378, 435);
+            this.textRotation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textRotation.Name = "textRotation";
-            this.textRotation.Size = new System.Drawing.Size(43, 26);
+            this.textRotation.Size = new System.Drawing.Size(62, 35);
             this.textRotation.TabIndex = 39;
             this.textRotation.Text = "0";
             // 
@@ -461,9 +496,10 @@ namespace PDFQFZ
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(215, 293);
+            this.label10.Location = new System.Drawing.Point(322, 440);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 20);
+            this.label10.Size = new System.Drawing.Size(54, 28);
             this.label10.TabIndex = 38;
             this.label10.Text = "旋转";
             // 
@@ -471,18 +507,20 @@ namespace PDFQFZ
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(297, 292);
+            this.label9.Location = new System.Drawing.Point(446, 438);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(15, 20);
+            this.label9.Size = new System.Drawing.Size(21, 28);
             this.label9.TabIndex = 40;
             this.label9.Text = "°";
             // 
             // textOpacity
             // 
             this.textOpacity.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textOpacity.Location = new System.Drawing.Point(335, 323);
+            this.textOpacity.Location = new System.Drawing.Point(502, 484);
+            this.textOpacity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textOpacity.Name = "textOpacity";
-            this.textOpacity.Size = new System.Drawing.Size(48, 26);
+            this.textOpacity.Size = new System.Drawing.Size(70, 35);
             this.textOpacity.TabIndex = 42;
             this.textOpacity.Text = "100";
             // 
@@ -490,9 +528,10 @@ namespace PDFQFZ
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(389, 326);
+            this.label12.Location = new System.Drawing.Point(584, 489);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 20);
+            this.label12.Size = new System.Drawing.Size(94, 28);
             this.label12.TabIndex = 41;
             this.label12.Text = "%不透明";
             // 
@@ -504,18 +543,20 @@ namespace PDFQFZ
             this.comboDJ.Items.AddRange(new object[] {
             "叠加",
             "合并"});
-            this.comboDJ.Location = new System.Drawing.Point(359, 12);
+            this.comboDJ.Location = new System.Drawing.Point(538, 18);
+            this.comboDJ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboDJ.Name = "comboDJ";
-            this.comboDJ.Size = new System.Drawing.Size(95, 28);
+            this.comboDJ.Size = new System.Drawing.Size(140, 36);
             this.comboDJ.TabIndex = 44;
             // 
             // isSaveSources
             // 
             this.isSaveSources.AutoSize = true;
             this.isSaveSources.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.isSaveSources.Location = new System.Drawing.Point(286, 104);
+            this.isSaveSources.Location = new System.Drawing.Point(429, 156);
+            this.isSaveSources.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.isSaveSources.Name = "isSaveSources";
-            this.isSaveSources.Size = new System.Drawing.Size(168, 24);
+            this.isSaveSources.Size = new System.Drawing.Size(248, 32);
             this.isSaveSources.TabIndex = 45;
             this.isSaveSources.Text = "保存在源文件文件夹下";
             this.isSaveSources.UseVisualStyleBackColor = true;
@@ -529,27 +570,30 @@ namespace PDFQFZ
             this.comboBoxYz.Items.AddRange(new object[] {
             "目录模式",
             "文件模式"});
-            this.comboBoxYz.Location = new System.Drawing.Point(13, 184);
+            this.comboBoxYz.Location = new System.Drawing.Point(20, 276);
+            this.comboBoxYz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxYz.Name = "comboBoxYz";
-            this.comboBoxYz.Size = new System.Drawing.Size(360, 28);
+            this.comboBoxYz.Size = new System.Drawing.Size(538, 36);
             this.comboBoxYz.TabIndex = 46;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(8, 292);
+            this.label13.Location = new System.Drawing.Point(12, 438);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.Size = new System.Drawing.Size(96, 28);
             this.label13.TabIndex = 47;
             this.label13.Text = "印章尺寸";
             // 
             // textMaxFgs
             // 
             this.textMaxFgs.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textMaxFgs.Location = new System.Drawing.Point(135, 355);
+            this.textMaxFgs.Location = new System.Drawing.Point(202, 532);
+            this.textMaxFgs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textMaxFgs.Name = "textMaxFgs";
-            this.textMaxFgs.Size = new System.Drawing.Size(61, 26);
+            this.textMaxFgs.Size = new System.Drawing.Size(90, 35);
             this.textMaxFgs.TabIndex = 49;
             this.textMaxFgs.Text = "20";
             // 
@@ -557,9 +601,10 @@ namespace PDFQFZ
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(8, 358);
+            this.label14.Location = new System.Drawing.Point(12, 537);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(121, 20);
+            this.label14.Size = new System.Drawing.Size(180, 28);
             this.label14.TabIndex = 48;
             this.label14.Text = "骑缝章最大分割数";
             // 
@@ -571,27 +616,30 @@ namespace PDFQFZ
             this.comboBoxQB.Items.AddRange(new object[] {
             "旋转切边",
             "不切边"});
-            this.comboBoxQB.Location = new System.Drawing.Point(317, 289);
+            this.comboBoxQB.Location = new System.Drawing.Point(476, 434);
+            this.comboBoxQB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxQB.Name = "comboBoxQB";
-            this.comboBoxQB.Size = new System.Drawing.Size(137, 28);
+            this.comboBoxQB.Size = new System.Drawing.Size(204, 36);
             this.comboBoxQB.TabIndex = 50;
             // 
             // textpdfpass
             // 
             this.textpdfpass.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textpdfpass.Location = new System.Drawing.Point(283, 355);
+            this.textpdfpass.Location = new System.Drawing.Point(424, 532);
+            this.textpdfpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textpdfpass.Name = "textpdfpass";
             this.textpdfpass.PasswordChar = '*';
-            this.textpdfpass.Size = new System.Drawing.Size(171, 26);
+            this.textpdfpass.Size = new System.Drawing.Size(254, 35);
             this.textpdfpass.TabIndex = 52;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(213, 358);
+            this.label15.Location = new System.Drawing.Point(320, 537);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 20);
+            this.label15.Size = new System.Drawing.Size(94, 28);
             this.label15.TabIndex = 51;
             this.label15.Text = "PDF密码";
             // 
@@ -603,17 +651,19 @@ namespace PDFQFZ
             this.comboBoxPages.Items.AddRange(new object[] {
             "叠加",
             "合并"});
-            this.comboBoxPages.Location = new System.Drawing.Point(859, 12);
+            this.comboBoxPages.Location = new System.Drawing.Point(1288, 18);
+            this.comboBoxPages.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxPages.Name = "comboBoxPages";
-            this.comboBoxPages.Size = new System.Drawing.Size(63, 28);
+            this.comboBoxPages.Size = new System.Drawing.Size(92, 36);
             this.comboBoxPages.TabIndex = 53;
             this.comboBoxPages.SelectionChangeCommitted += new System.EventHandler(this.comboBoxPages_SelectionChangeCommitted);
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(97, 101);
+            this.progressBar1.Location = new System.Drawing.Point(146, 152);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(357, 3);
+            this.progressBar1.Size = new System.Drawing.Size(536, 4);
             this.progressBar1.TabIndex = 56;
             this.progressBar1.Visible = false;
             // 
@@ -621,9 +671,10 @@ namespace PDFQFZ
             // 
             this.checkMultiple.AutoSize = true;
             this.checkMultiple.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.checkMultiple.Location = new System.Drawing.Point(370, 157);
+            this.checkMultiple.Location = new System.Drawing.Point(555, 236);
+            this.checkMultiple.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkMultiple.Name = "checkMultiple";
-            this.checkMultiple.Size = new System.Drawing.Size(84, 24);
+            this.checkMultiple.Size = new System.Drawing.Size(122, 32);
             this.checkMultiple.TabIndex = 57;
             this.checkMultiple.Text = "多章连盖";
             this.checkMultiple.UseVisualStyleBackColor = true;
@@ -632,9 +683,10 @@ namespace PDFQFZ
             // 
             this.checkRandom.AutoSize = true;
             this.checkRandom.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.checkRandom.Location = new System.Drawing.Point(245, 325);
+            this.checkRandom.Location = new System.Drawing.Point(368, 488);
+            this.checkRandom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkRandom.Name = "checkRandom";
-            this.checkRandom.Size = new System.Drawing.Size(84, 24);
+            this.checkRandom.Size = new System.Drawing.Size(122, 32);
             this.checkRandom.TabIndex = 58;
             this.checkRandom.Text = "随机参数";
             this.checkRandom.UseVisualStyleBackColor = true;
@@ -642,9 +694,9 @@ namespace PDFQFZ
             // Form1
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 561);
+            this.ClientSize = new System.Drawing.Size(700, 842);
             this.Controls.Add(this.checkRandom);
             this.Controls.Add(this.checkMultiple);
             this.Controls.Add(this.progressBar1);
@@ -698,9 +750,10 @@ namespace PDFQFZ
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "PDF加盖骑缝章(V1.31)";
+            this.Text = "PDF盖章";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

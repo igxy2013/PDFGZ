@@ -51,6 +51,96 @@ namespace PDFQFZ
                 outputPath = System.IO.Path.GetDirectoryName(args[0]);
             }
         }
+        private void comboBoxYz_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var val = comboBoxYz.SelectedValue;
+            if (val == null) return;
+            var path = val.ToString();
+            if (!File.Exists(path)) return;
+
+            imgPath = path;
+            Bitmap bmp = new Bitmap(path);
+            if (!bmp.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Png))
+            {
+                bmp = SetWhiteToTransparent(bmp);
+            }
+            if (opacity < 100)
+            {
+                bmp = SetImageOpacity(bmp, opacity);
+            }
+            if (rotation != 0)
+            {
+                bool qb = qbflag == 0 ? true : false;
+                bmp = RotateImg(bmp, rotation, qb);
+            }
+            pictureBox2.Image = bmp;
+            UpdateStampPreviewSize();
+            pictureBox2.Visible = true;
+        }
+        private void textCC_TextChanged(object sender, EventArgs e)
+        {
+            UpdateStampPreviewSize();
+        }
+        private void comboBoxYz_DropDown(object sender, EventArgs e)
+        {
+            CleanInvalidYz(null, null);
+        }
+        private void comboBoxYz_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                RemoveSelectedYz(null, null);
+                e.Handled = true;
+            }
+        }
+        private void RemoveSelectedYz(object sender, EventArgs e)
+        {
+            int idx = comboBoxYz.SelectedIndex;
+            if (idx < 0 || idx >= dtYz.Rows.Count) return;
+            dtYz.Rows.RemoveAt(idx);
+            RefreshYzCombo();
+            RewriteYzLogFromDataTable();
+        }
+        private void CleanInvalidYz(object sender, EventArgs e)
+        {
+            for (int i = dtYz.Rows.Count - 1; i >= 0; i--)
+            {
+                var path = dtYz.Rows[i]["Value"].ToString();
+                if (!File.Exists(path))
+                {
+                    dtYz.Rows.RemoveAt(i);
+                }
+            }
+            RefreshYzCombo();
+            RewriteYzLogFromDataTable();
+        }
+        private void RefreshYzCombo()
+        {
+            comboBoxYz.DataSource = null;
+            comboBoxYz.DisplayMember = "Name";
+            comboBoxYz.ValueMember = "Value";
+            comboBoxYz.DataSource = dtYz;
+        }
+        private void RewriteYzLogFromDataTable()
+        {
+            try
+            {
+                using (var sw = new StreamWriter(yzLog, false))
+                {
+                    foreach (DataRow row in dtYz.Rows)
+                    {
+                        var p = row["Value"].ToString();
+                        if (!string.IsNullOrWhiteSpace(p))
+                        {
+                            sw.WriteLine(p);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
 
 
         //程序加载
@@ -113,6 +203,11 @@ namespace PDFQFZ
             textname.Text = signText;
             pictureBox2.Parent = this.pictureBox1;//设置盖章预览图片的父控件为盖章预览框
             pictureBox2.Location = new Point(220, 380);//盖章预览图片位置
+            comboBoxYz.SelectionChangeCommitted += comboBoxYz_SelectionChangeCommitted;
+            comboBoxYz.SelectedIndexChanged += comboBoxYz_SelectionChangeCommitted;
+            textCC.TextChanged += textCC_TextChanged;
+            comboBoxYz.DropDown += comboBoxYz_DropDown;
+            comboBoxYz.KeyDown += comboBoxYz_KeyDown;
             if (qmType == 0)
             {
                 labelname.Text = "签名";
@@ -1644,6 +1739,7 @@ namespace PDFQFZ
             }
             pictureBox1.Location = new Point(point.X - pictureBox1.Width / 2, point.Y - pictureBox1.Height / 2);
             pictureBox1.Image = pageImage;
+            UpdateStampPreviewSize();
             labelPage.Text = imgStartPage + "/" + imgPageCount;
             pictureBox2.Visible = true;
 
@@ -1697,6 +1793,35 @@ namespace PDFQFZ
             {
                 buttonNext.Enabled = true;
             }
+        }
+        private void UpdateStampPreviewSize()
+        {
+            if (viewPdfimgs == null || imgStartPage < 1) return;
+            var pageImage = viewPdfimgs[imgStartPage - 1];
+            if (pageImage == null) return;
+            float scale = 1f * pictureBox1.Width / pageImage.Width;
+            int currSize;
+            if (!int.TryParse(textCC.Text, out currSize)) currSize = size;
+            float dpts = (float)currSize * 72f / 25.4f;
+            int d = (int)Math.Max(1, dpts * scale);
+            pictureBox2.Size = new Size(d, d);
+            yzr = d / 2;
+            float px, py;
+            DataRow[] arrRow = dtPos.Select("Path = '" + previewPath + "' and Page = " + imgStartPage);
+            if (arrRow == null || arrRow.Length == 0)
+            {
+                px = Convert.ToSingle(textPx.Text);
+                py = Convert.ToSingle(textPy.Text);
+            }
+            else
+            {
+                DataRow dr = arrRow[0];
+                px = Convert.ToSingle(dr["X"].ToString());
+                py = Convert.ToSingle(dr["Y"].ToString());
+            }
+            int X = Convert.ToInt32((pictureBox1.Width - 2 * yzr) * px);
+            int Y = Convert.ToInt32((pictureBox1.Height - 2 * yzr) * py);
+            pictureBox2.Location = new Point(X, Y);
         }
 
         //跳转到指定页
