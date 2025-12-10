@@ -1913,7 +1913,7 @@ namespace PDFQFZ
                 viewPdfimgs[0] = viewPdfFile.GetPageImage(0, 72);
                 viewPDFPage();
                 // 启动一个任务
-                var task = Task.Run(() => LoadPageImagesAsync(viewPdfFile, token));
+                var task = Task.Run(() => LoadPageImagesAsync(viewPdfFile, token), token);
                 try
                 {
                     await task;
@@ -1945,16 +1945,24 @@ namespace PDFQFZ
         }
         private void LoadPageImagesAsync(PDFFile viewPdfFile, CancellationToken token)
         {
-            // 异步加载剩余的页面
-            for (int i = 1; i < viewPdfFile.PageCount; i++)
+            try
             {
-                // 检查是否被请求取消
-                token.ThrowIfCancellationRequested();
+                // 异步加载剩余的页面
+                for (int i = 1; i < viewPdfFile.PageCount; i++)
+                {
+                    // 检查是否被请求取消
+                    if (token.IsCancellationRequested)
+                    {
+                        break;
+                    }
 
-                viewPdfimgs[i] = viewPdfFile.GetPageImage(i, 72);
+                    viewPdfimgs[i] = viewPdfFile.GetPageImage(i, 72);
+                }
             }
-
-            viewPdfFile.Dispose();
+            finally
+            {
+                viewPdfFile.Dispose();
+            }
         }
         //根据印章类型切换窗口大小
         private void comboYz_SelectionChangeCommitted(object sender, EventArgs e)
